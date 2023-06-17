@@ -1,0 +1,65 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background: #333;
+  color: white;
+  h1 {
+    padding-bottom: 5vh;
+    user-select: none;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+  }
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  }
+  tr {
+    td:first-child {
+      background: #222;
+    }
+    &.Low td:last-child {
+      background: #558B2F;
+    }
+    &.Mod td:last-child {
+      background: #F9A825;
+    }
+    &.High td:last-child {
+      background: #EF6C00;
+    }
+    &.VHigh td:last-child {
+      background: #B71C1C;
+    }
+    &.Extr td:last-child {
+      background: #6A1B9A;
+    }
+  }
+  th {
+    background: #111;
+  }
+  th, td {
+    outline: 3px solid salmon;
+    padding: 8px;
+    text-align: center;
+  }
+
+  @import "d3_timeseries.min";

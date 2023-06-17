@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+body h1 {
+  padding-bottom: 5vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+tr td:first-child {
+  background: #222;
+}
+tr.Low td:last-child {
+  background: #558B2F;
+}
+tr.Mod td:last-child {
+  background: #F9A825;
+}
+tr.High td:last-child {
+  background: #EF6C00;
+}
+tr.VHigh td:last-child {
+  background: #B71C1C;
+}
+tr.Extr td:last-child {
+  background: #6A1B9A;
+}
+
+th {
+  background: #111;
+}
+
+th, td {
+  outline: 3px solid salmon;
+  padding: 8px;
+  text-align: center;
+}
+
+.d3_timeseries.axis {
+  font: 10px sans-serif;
+}
+
+.d3_timeseries.axis path,
+.d3_timeseries.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.d3_timeseries.mousevline {
+  fill: none;
+  stroke: #666;
+  stroke-dasharray: 3, 6;
+  stroke-width: 1;
+}
+
+.d3_timeseries.mousevline-text {
+  font: 10px sans-serif;
+}
+
+.d3_timeseries.tooltip {
+  position: absolute;
+  text-align: left;
+  font: 10px sans-serif;
+  padding: 2px;
+  background: white;
+  border: solid #888 1px;
+  border-radius: 4px;
+}
+
+.d3_timeseries.tooltip h4 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.d3_timeseries.axis text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}/*# sourceMappingURL=style.css.map */
