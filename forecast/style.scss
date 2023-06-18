@@ -20,6 +20,15 @@ body {
     padding-bottom: 5vh;
     user-select: none;
   }
+  p {
+    &#forecastgeo {
+      @extend h1;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
   .container {
     display: flex;
     justify-content: center;

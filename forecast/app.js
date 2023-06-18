@@ -1,8 +1,14 @@
 const searchParam = new URLSearchParams(location.search)
 
 const KEY = searchParam.get(`key`) || localStorage.getItem(`openuvkey`)
-const LAT = searchParam.get(`lat`) || localStorage.getItem(`lat`) || 13.761513
-const LNG = searchParam.get(`lng`) || localStorage.getItem(`lng`) || 100.569491
+const LAT = searchParam.get(`lat`) || localStorage.getItem(`lat`)
+const LNG = searchParam.get(`lng`) || localStorage.getItem(`lng`)
+
+document.querySelector(`#forecastgeo`).innerHTML = `Forecast Location : 
+<a href="https://pinghuskar.github.io/X-Marks-Leaflet?lat=${LAT}&lng=${LNG}" target="_blank">
+${LAT},${LNG}
+</a>
+`
 
 
 const UVWORD = (UVINDEX) => {
@@ -72,4 +78,8 @@ fetch(`https://api.openuv.io/api/v1/forecast?lat=${LAT}&lng=${LNG}&alt=100`, req
     chart('#chart')
     document.querySelector(`.d3_timeseries.line`).setAttribute(`stroke`,`red`)
   })
-  .catch(error => alert(error));
+  .catch(error => {
+    alert(error)
+    localStorage.setItem(`lat`,`13.761513`)
+    localStorage.setItem(`lng`,`100.569491`)
+  });
